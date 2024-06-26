@@ -2,7 +2,7 @@ default-board: default
 
 boards:
   default:
-    title: "§r§f GraphicScore PNX  §r"
+    title: "Test123"
     lines:
       - "§r§f ◆ Name: %graphic:player_name% "
       - "§r§f ◆ Item: %graphic:held_item_name% (x%graphic:held_item_count%) "
