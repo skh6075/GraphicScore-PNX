@@ -1,0 +1,9 @@
+default-board: default
+
+boards:
+  default:
+    title: "§r§f GraphicScore PNX  §r"
+    lines:
+      - "§r§f ◆ Name: %graphic:player_name% "
+      - "§r§f ◆ Item: %graphic:held_item_name% (x%graphic:held_item_count%) "
+      - "§r§f ◆ ONLINE: %graphic:online% / %graphic:online_max%"

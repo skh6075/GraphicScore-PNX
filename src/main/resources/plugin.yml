@@ -1,0 +1,5 @@
+name: GraphicScore
+main: me.skh6075.pnx.graphicscore.GraphicScore
+version: "1.0.0"
+api: [ "2.0.0" ]
+author: skh6075
