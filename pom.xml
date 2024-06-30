@@ -32,7 +32,7 @@
         <dependency>
             <groupId>com.github.PowerNukkitX</groupId>
             <artifactId>PowerNukkitX</artifactId>
-            <version>master-1704cf2916-1</version>
+            <version>master-snapshot-g507e679-1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

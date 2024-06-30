@@ -15,7 +15,7 @@ import graphicscore.scoreboard.Scoreboard;
 import java.util.HashMap;
 import java.util.Map;
 
-public class    GraphicScore extends PluginBase implements Listener {
+public class GraphicScore extends PluginBase implements Listener {
     private static GraphicScore instance;
     private static Scoreboard defaultBoard;
     private static final Map<String, Scoreboard> boards = new HashMap<>();

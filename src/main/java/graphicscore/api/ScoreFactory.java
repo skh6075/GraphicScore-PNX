@@ -1,3 +1,4 @@
+
 package graphicscore.api;
 
 import cn.nukkit.Player;
@@ -35,7 +36,7 @@ public class ScoreFactory {
         packet.displayName = displayName;
         packet.criteriaName = "dummy";
         packet.sortOrder = SortOrder.ASCENDING;
-        player.getNetworkSession().sendPacket(packet);
+        player.getSession().sendPacket(packet);
     }
 
     public static void setLine(Player player, int line, String message) {
@@ -55,7 +56,7 @@ public class ScoreFactory {
 
         scoreboards.get(player.getUniqueId()).put(rematchedLine, message);
 
-        player.getNetworkSession().sendPacket(pk);
+        player.getSession().sendPacket(pk);
     }
 
     public static void setLines(Player player, Map<Integer, String> lines) {
@@ -80,7 +81,7 @@ public class ScoreFactory {
         SetScorePacket pk = new SetScorePacket();
         pk.action = SetScorePacket.Action.SET;
         pk.infos.add(new SetScorePacket.ScoreInfo(rematchedLine, OBJECTIVE_ID, rematchedLine, message));
-        player.getNetworkSession().sendPacket(pk);
+        player.getSession().sendPacket(pk);
 
         scoreboards.get(player.getUniqueId()).put(rematchedLine, message);
     }
@@ -95,7 +96,7 @@ public class ScoreFactory {
         pk.action = SetScorePacket.Action.REMOVE;
         pk.infos.add(new SetScorePacket.ScoreInfo(rematchedLine, OBJECTIVE_ID, rematchedLine, getLine(player, rematchedLine)));
 
-        player.getNetworkSession().sendPacket(pk);
+        player.getSession().sendPacket(pk);
     }
 
     public static void removeToPlayer(Player player) {
@@ -103,7 +104,7 @@ public class ScoreFactory {
             String objectiveName = scoreboards.get(player.getUniqueId()).get(0);
             RemoveObjectivePacket packet = new RemoveObjectivePacket();
             packet.objectiveName = objectiveName;
-            player.getNetworkSession().sendPacket(packet);
+            player.getSession().sendPacket(packet);
 
             scoreboards.remove(player.getUniqueId());
         }
@@ -121,4 +122,3 @@ public class ScoreFactory {
         return line < MIN_LINE || line > MAX_LINE;
     }
 }
-
