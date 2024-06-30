@@ -1,0 +1,8 @@
+graphicscore\GraphicScore.class
+graphicscore\placeholder\defaults\GraphicExtension.class
+graphicscore\api\ScoreFactory.class
+graphicscore\placeholder\PlaceholderExtension.class
+graphicscore\player\ScorePlayer.class
+graphicscore\scoreboard\Scoreboard.class
+graphicscore\player\ScorePlayerManager.class
+graphicscore\placeholder\PlaceholderAPI.class
